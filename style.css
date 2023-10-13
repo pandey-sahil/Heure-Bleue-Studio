@@ -38,7 +38,8 @@ body {
     width: 100%;
 
 }
-#nav{
+
+#nav {
     height: 5vw;
     /* background-color: red; */
     position: absolute;
@@ -49,24 +50,28 @@ body {
     justify-content: space-between;
     width: 100%;
 }
-.navpt1{
+
+.navpt1 {
     display: flex;
 
     align-items: center;
     gap: 4vw;
 }
-.navpt2{
+
+.navpt2 {
     width: 12vw;
     text-align: end;
 }
-#nav h3{
+
+#nav h3 {
     font-family: b;
     font-weight: 500;
     font-size: 1.3vw;
     color: #E1DDDB;
 
 }
-#nav svg{
+
+#nav svg {
     height: 2vw;
     filter: invert();
     /* margin-right: 2vw; */
@@ -74,6 +79,7 @@ body {
     color: white;
     object-fit: cover;
 }
+
 #page1 #text {
     height: 100vh;
     width: 100vw;
@@ -102,7 +108,7 @@ body {
     position: absolute;
     bottom: 8%;
     left: 52%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-weight: 500;
     color: #E1DDDB;
 }
