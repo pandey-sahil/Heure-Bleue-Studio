@@ -25,6 +25,20 @@ body {
     overflow-x: hidden;
 }
 
+#cursor {
+    position: absolute;
+    /* margin-left: 3vw; */
+    border-radius: 50%;
+    z-index: 99;
+}
+
+#inner-crsr {
+    border-radius: 50%;
+    height: .8vw;
+    width: .8vw;
+    background-color: sandybrown;
+}
+
 #page1 {
     height: 100vh;
     overflow: hidden;
@@ -42,7 +56,9 @@ body {
 #nav {
     height: 5vw;
     /* background-color: red; */
+    opacity: 0;
     position: absolute;
+    z-index: 2;
     top: 0;
     padding: 2vw 4vw;
     display: flex;
@@ -114,7 +130,91 @@ body {
 }
 
 #page2 {
-    height: 100vh;
+    /* height: 150vh; */
     width: 100%;
-    background-color: red;
+    position: relative;
+    background-color: #E1DEDC;
+}
+
+#upper {
+    height: 50vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    width: 100vw;
+    padding: 4vw;
+    padding-bottom: 0;
+}
+
+#upper h3 {
+    font-family: b;
+    font-weight: 500;
+    /* color: #E1DDDB; */
+    text-align: center;
+
+}
+
+#line1 {
+    height: 80%;
+    background-color: #2E3A40;
+    width: .2vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#center {
+    height: 80vh;
+    width: 100vw;
+    /* background-color: saddlebrown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#center svg {
+    height: 80%;
+    fill: #2E3A40;
+}
+
+#center h1 {
+    font-size: 18vw;
+    letter-spacing: -20px;
+    line-height: 1;
+    color: #2E3A40;
+    font-weight: 400;
+    text-align: center;
+}
+
+#lower {
+    height: 45vh;
+    /* background: rebeccapurple; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+#line2 {
+    height: 80%;
+    background: #000;
+    /* clip-path: inset(0 0 100% 0); */
+    width: .11vw;
+    margin-left: 15vw;
+    rotate: -30deg;
+}
+#lower h3{
+    margin-left: 40vw;
+    font-weight: 500;
+    font-size: 1.3vw;
+
+    font-family: b;
+}
+#page4{
+    height: 100vh;
+    width: 100vw;
 }
