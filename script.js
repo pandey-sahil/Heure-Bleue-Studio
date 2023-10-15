@@ -93,6 +93,7 @@ function page2Anime() {
             clipPath: 'inset(0 0 100% 0)'
         })
 
+
 }
 page2Anime();
 
@@ -101,7 +102,7 @@ function page3Anime() {
     var tl2 = gsap.timeline({
         scrollTrigger: {
             start: "top 0%",
-            end: "top -80%",
+            end: "top -180%",
             scroller: "#main",
             trigger: "#page3",
             pin: true,
@@ -109,26 +110,46 @@ function page3Anime() {
             markers: true
         }
     })
+    gsap.from("#left, #mid, #right",{
+        y:"-100%",
+        duration:15,
+        scrollTrigger: {
+            start: "top 100%",
+            end: "top 0%",
+            scroller: "#main",
+            trigger: "#lower",
+            // pin: true,
+            scrub: 1.5,
+            markers: true
+        }
+    })
     tl2.to("#mid video", {
         height: "100vh",
-        width: "100vw"
+        width: "100vw",
+        duration:2
+
     }, "a")
         .to("#mid img", {
             height: "100vh",
-            width: "100vw"
+            width: "100vw",
+        duration:2
         }, "a")
         .to("#left", {
-            x: "-100%"
+            x: "-100%",
+            duration:2
+
         }, "a")
         .to("#right", {
-            x: "100%"
+            x: "100%",
+            duration:2
         }, "a")
         .to("#mid img:nth-child(1)", {
-            y: "-150%"
+            y: "-100%",
+            duration:2
         }, "a")
         .to("#mid img:nth-child(3)", {
-            bottom: "-200%"
-
+            y: "200%",
+            duration:2
         }, "a")
 }
 page3Anime();

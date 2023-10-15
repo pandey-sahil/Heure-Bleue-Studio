@@ -219,6 +219,7 @@ body {
     width: 100vw;
     display: flex;
     overflow-y: hidden;
+    background-color: #000000;
     /* overflow-x: auto; */
     justify-content: space-between;
     flex-shrink: 0;
@@ -226,11 +227,16 @@ body {
 #left{
     width: 22vw;
     height: 100vh;
-    background-color: red;
+    overflow: hidden;
+    /* background-color: red; */
 }
 #left img{
     height: 150vh;
     transform: translate(-70%,-53%);
+}
+#left img:nth-child(2){
+    height: 150vh;
+    transform: translate(-70%,-23%);
 }
 #mid{
     /* width: 56vw; */
@@ -245,7 +251,7 @@ body {
     flex-shrink: 0;
 
 }
-#mid::-webkit-scrollbar{
+#page3::-webkit-scrollbar{
     display: none;
 }
 #mid img{
@@ -283,4 +289,8 @@ z-index: 1;
     width: 22vw;
     height: 100vh;
     background-color: red;
+}
+#page4{
+    height: 100vh;
+    width: 100vw;
 }
