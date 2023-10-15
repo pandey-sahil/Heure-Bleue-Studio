@@ -118,7 +118,6 @@ function page3Anime() {
             end: "top 0%",
             scroller: "#main",
             trigger: "#lower",
-            // pin: true,
             scrub: 1.5,
             markers: true
         }
