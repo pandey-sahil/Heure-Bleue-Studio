@@ -35,11 +35,11 @@ function loadingAnime() {
     var crsr = document.querySelector('#cursor');
     var main = document.querySelector("#main")
 
-    main.addEventListener("mousemove", function(dets){
+    main.addEventListener("mousemove", function (dets) {
         // console.log(dets.x)
-        gsap.to(crsr,{
+        gsap.to(crsr, {
             top: dets.y,
-            left: dets.x 
+            left: dets.x
         })
     })
 
@@ -63,35 +63,72 @@ function loadingAnime() {
 }
 loadingAnime();
 
-function page2Anime(){
+function page2Anime() {
 
     var tl = gsap.timeline({
-        scrollTrigger:{
+        scrollTrigger: {
             start: "top 0%",
-            end:"top -80%",
+            end: "top -80%",
             scroller: "#main",
-            trigger:"#page2",
+            trigger: "#page2",
             scrub: 1.5,
-            markers:true
+            markers: true
         }
     })
 
-    tl.to("#line1",{
+    tl.to("#line1", {
         clipPath: 'inset(100% 0 0 0)'
-    },"ab")
-    .to("#nav h3, #nav svg",{
-        filter:"invert(0)",
-        color: 'black'
-    },'ab')
-    .to("#page2",{
-        backgroundColor:"#0148C6"
-    },"aa")
-    .to("#center svg",{
-        fill: '#000'
-    },"aa")
-    .from("#line2",{    
-        clipPath: 'inset(0 0 100% 0)'
-    })
+    }, "ab")
+        .to("#nav h3, #nav svg", {
+            filter: "invert(0)",
+            color: 'black'
+        }, 'ab')
+        .to("#page2", {
+            backgroundColor: "#0148C6"
+        }, "aa")
+        .to("#center svg", {
+            fill: '#000'
+        }, "aa")
+        .from("#line2", {
+            clipPath: 'inset(0 0 100% 0)'
+        })
 
 }
 page2Anime();
+
+function page3Anime() {
+
+    var tl2 = gsap.timeline({
+        scrollTrigger: {
+            start: "top 0%",
+            end: "top -80%",
+            scroller: "#main",
+            trigger: "#page3",
+            pin: true,
+            scrub: 1.5,
+            markers: true
+        }
+    })
+    tl2.to("#mid video", {
+        height: "100vh",
+        width: "100vw"
+    }, "a")
+        .to("#mid img", {
+            height: "100vh",
+            width: "100vw"
+        }, "a")
+        .to("#left", {
+            x: "-100%"
+        }, "a")
+        .to("#right", {
+            x: "100%"
+        }, "a")
+        .to("#mid img:nth-child(1)", {
+            y: "-150%"
+        }, "a")
+        .to("#mid img:nth-child(3)", {
+            bottom: "-200%"
+
+        }, "a")
+}
+page3Anime();
